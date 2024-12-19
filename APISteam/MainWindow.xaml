@@ -1,0 +1,52 @@
+﻿<controls:MetroWindow x:Class="APISteam.Views.MainWindow"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      xmlns:viewModels="clr-namespace:APISteam.ViewModels"
+                      xmlns:views="clr-namespace:APISteam.Views"
+                      xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+                      xmlns:wpf="clr-namespace:ModernWpf;assembly=ModernWpf"
+                      xmlns:mde="https://spiegelp.github.io/MaterialDesignExtensions/winfx/xaml"
+                      mc:Ignorable="d"
+                      Title="Top Steam Games"
+                      Height="600"
+                      Width="800"
+                      Background="#181818"
+                      Foreground="White">
+
+    <controls:MetroWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/vs/colors.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/themes/light.emerald.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/ModernWpf;component/Themes/Generic.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/ModernWpf;component/Themes/BaseValues.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <mde:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+        </ResourceDictionary>
+    </controls:MetroWindow.Resources>
+
+    <Grid>
+        <!-- Configuration des colonnes de la grille -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Menu à gauche -->
+        <StackPanel Grid.Column="0" Background="#2E2E2E" Margin="10">
+            <Button Content="Top 10 Jeux"
+                    Command="{Binding ShowTop10GamesCommand}"
+                    Padding="10"/>
+            <Button Content="Nouveautés"
+                    Command="{Binding ShowNewReleasesCommand}"
+                    Padding="10"/>
+        </StackPanel>
+
+        <!-- Affichage du contenu principal -->
+        <ContentControl Grid.Column="1" Content="{Binding CurrentViewModel}" />
+    </Grid>
+</controls:MetroWindow>

@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="APISteam.Views.NewReleasesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Width="800" Height="600">
+    <Grid Background="#181818">
+        <StackPanel Margin="20">
+            <TextBlock Text="New Releases"
+                       Style="{StaticResource MainHeaderStyle}" />
+            <ListView ItemsSource="{Binding NewReleases}" 
+                      Background="#1C1C1C"
+                      BorderBrush="#333333"
+                      BorderThickness="1"
+                      Padding="10"
+                      HorizontalAlignment="Stretch"
+                      VerticalAlignment="Stretch">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Padding="10"
+                                Margin="10"
+                                Width="220"
+                                Height="280"
+                                BorderBrush="#333333"
+                                BorderThickness="1"
+                                Background="#282828">
+                            <Border.Effect>
+                                <DropShadowEffect Color="Black" Opacity="0.3" BlurRadius="5"/>
+                            </Border.Effect>
+                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <Image Source="{Binding ImageUrl}" Width="180" Height="120" Stretch="UniformToFill" Margin="5" />
+                                <TextBlock Text="{Binding Name}"
+                                           Style="{StaticResource CustomTextBlockStyle}"
+                                           FontWeight="Bold"
+                                           FontSize="18"
+                                           Margin="10,5,10,10" />
+                                <TextBlock Text="{Binding ReleaseDate}"
+                                           Style="{StaticResource SubHeaderStyle}"
+                                           Margin="10,0,10,0" />
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
+    </Grid>
+</UserControl>

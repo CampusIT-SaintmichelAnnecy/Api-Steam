@@ -1,0 +1,108 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\l.giraud\\RiderProjects\\APISteam\\APISteam\\APISteam.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\l.giraud\\RiderProjects\\APISteam\\APISteam\\APISteam.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\l.giraud\\RiderProjects\\APISteam\\APISteam\\APISteam.csproj",
+        "projectName": "APISteam",
+        "projectPath": "C:\\Users\\l.giraud\\RiderProjects\\APISteam\\APISteam\\APISteam.csproj",
+        "packagesPath": "C:\\Users\\l.giraud\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\l.giraud\\RiderProjects\\APISteam\\APISteam\\obj\\",
+        "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
+        "configFilePaths": [
+          "C:\\Users\\l.giraud\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "MahApps.Metro": {
+              "target": "Package",
+              "version": "[3.0.0-alpha0513, )"
+            },
+            "MahApps.Metro.IconPacks": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            },
+            "MahApps.Metro.Resources": {
+              "target": "Package",
+              "version": "[0.6.1, )"
+            },
+            "MaterialDesignColors": {
+              "target": "Package",
+              "version": "[3.1.1-ci795, )"
+            },
+            "MaterialDesignExtensions": {
+              "target": "Package",
+              "version": "[4.0.0-a02, )"
+            },
+            "MaterialDesignThemes": {
+              "target": "Package",
+              "version": "[5.1.1-ci795, )"
+            },
+            "ModernWPF": {
+              "target": "Package",
+              "version": "[2.0.0-alpha97, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Users\\l.giraud\\.dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
